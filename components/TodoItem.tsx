@@ -20,6 +20,7 @@ const TodoItem = ({ todo, toggleTodo }: TodoItemProps) => {
     >
       <Text style={[
         styles.todoText,
+        // Add a line through text when the task is complete
         todo.completed && styles.completedText
       ]}>
         {todo.text}

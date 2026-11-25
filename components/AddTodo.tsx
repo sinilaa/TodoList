@@ -6,12 +6,16 @@ type AddTodoProps = {
 }
 
 export default function AddTodo({ addTodo }: AddTodoProps) {
+  // Store the text typed in the input
   const [input, setInput] = useState<string>('')
 
   const handleAddTodo = () => {
+    // Do not add an empty task
     if (!input.trim()) return
 
+    // Send the cleaned text to the app
     addTodo(input.trim())
+    // Clear the input after adding
     setInput('')
   }
 

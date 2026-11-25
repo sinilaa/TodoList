@@ -10,6 +10,7 @@ interface TodoListProps {
 export default function TodoList({item, toggleTodo}: TodoListProps) {
   return (
     <View style={styles.todoItem}>
+      {/* Show one task and give it toggle access */}
       <TodoItem todo={item} toggleTodo={toggleTodo} />
     </View>
   )
